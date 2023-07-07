@@ -190,7 +190,7 @@ runs:
           cd ${{ github.action_path }}
           go build -o digger ./cmd/digger
           chmod +x digger
-          mv digger /usr/local/bin/digger
+          sudo mv digger /usr/local/bin/digger
           cd ${{ github.workspace }}
           digger
     - name: run digger
