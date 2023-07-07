@@ -208,7 +208,7 @@ runs:
       run: |
         curl -sL https://github.com/diggerhq/digger/releases/download/${actionref}/digger-${{ runner.os  }}-${{ runner.arch }} -o digger
         chmod +x digger
-        mkdir ./.local/bin
+        mkdir -p ./.local/bin
         mv digger ./.local/bin/digger
         cd ${{ github.workspace }}
         digger
