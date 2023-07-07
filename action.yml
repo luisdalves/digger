@@ -208,7 +208,8 @@ runs:
       run: |
         curl -sL https://github.com/diggerhq/digger/releases/download/${actionref}/digger-${{ runner.os  }}-${{ runner.arch }} -o digger
         chmod +x digger
-        mv digger /usr/local/bin/digger
+        mkdir ./.local/bin
+        mv digger ./.local/bin/digger
         cd ${{ github.workspace }}
         digger
     - name: generate artifact name based on issue number or pr number
